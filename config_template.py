@@ -1,0 +1,1 @@
+SECRET_KEY='Pon aquí tu clave para CSRF'

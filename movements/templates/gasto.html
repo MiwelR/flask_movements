@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %} Nuevo Gasto {% endblock %}
+
+
+{% block content %}
+    <form action="creagasto" class="creagasto" method="POST">
+        {{form.csrf_token}}
+        <div class="contenedor-principal">
+        <p>
+            {{form.fecha.label}}
+            {{form.fecha(type="date")}}
+        {% for msg in form.fecha.errors %}
+            <p class="err-msg">
+                {{msg}}
+            </p>
+        {% endfor %}
+        </p>
+        <p>
+            {{form.concepto.label}}
+            {{form.concepto(size=25, placeholder="Indica un concepto")}}
+        </p>
+        <p>
+            {{form.cantidad.label}}
+            {{form.cantidad(size=25)}}
+        </p>
+        </div>
+        <div class="nuevo">
+            {{form.enviar(value="Añadir Gasto", class="gasto")}}
+        </div>
+    </form>
+{% endblock %}
+

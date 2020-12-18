@@ -1,0 +1,120 @@
+.contenedor-principal{
+    background-color: white;
+    /* border: 1px solid #fff15f; */
+    width: 650px;
+    margin: 0 auto;
+    height: 100%;
+    bottom: 0;
+    top: 0;
+}
+
+table {
+    display: grid;
+    border-collapse: separate;
+    border-spacing: 5px;
+    color: rgb(14, 14, 14);
+    justify-content: center;
+}
+
+td, th {
+    padding: .5rem;
+    color: #32292F;
+}
+
+.encabezados, .datos-tabla{
+    background-color: black;
+    width: 8rem;
+    color: white;
+}
+
+.datos-tabla{
+    background-color: white;
+    color: black;
+    width: 8rem;
+}
+
+.importes, .total {
+    text-align: right;
+    padding: .5rem;
+    background-color: black;
+    color: #fff;
+}
+
+.importes{
+    background-color: white;
+    color: black;
+}
+
+.modificar{
+    background-color: transparent;
+    color: #A1C349;
+}
+
+.eliminar{
+    color: #C95D63;
+}
+
+.botones-index {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.botones-index > li {
+    max-width: calc(48% - 5px);
+    text-align: center;
+    margin: 0 .5rem;
+}
+
+.botones-index > li:last-child {
+    justify-self: center;
+}
+
+.ingreso{
+    padding: 0.3rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffffff;
+    background-color:#95c029;
+    border-radius: 6px;
+    border: 1px solid #95c029;
+}
+
+.ingreso:hover{
+    color: #95c029;
+    background-color: #ffffff;
+    border: 1px solid #95c029;
+}
+
+.gasto{
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffffff;
+    background-color:#bb3922;
+    border-radius: 6px;
+    border: 1px solid #bb3922;
+}
+
+.gasto:hover{
+    color: #bb3922;
+    background-color: #ffffff;
+    border: 1px solid #bb3922;
+}
+
+.boton-neutro{
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffffff;
+    background-color:#3267ca;
+    border-radius: 6px;
+    border: 1px solid #3267ca;
+}
+
+.boton-neutro:hover{
+    color: #3267ca;
+    background-color: #ffffff;
+    border: 1px solid #3267ca;
+}

@@ -1,0 +1,100 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #32292F;
+    font-weight: bold;
+}
+
+body{
+    display: grid;
+    top: 80%;
+    background-color: #F0F7F4;
+    background-image: url(../images/bg-kanji.png);
+    background-repeat: repeat;
+    margin:0 auto;
+}
+
+header{
+    width:100%;
+    margin:0 auto;
+    position:relative;
+    margin-bottom: 0;
+}
+
+.header{
+    background-color: #fff15f;
+    padding-top: .4rem;
+    margin-bottom: 0;
+}
+
+.header .logo {
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+    padding: 0 auto;
+}
+
+.contenido h1{
+    text-align: center;
+    background-color: black;
+    margin: 0 auto;
+    color: #F0F7F4;
+}
+
+.contenido table{
+    border: 1px red;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.creaalta{
+    display: grid;
+    justify-content: center;
+    margin-top: 3.5rem;
+}
+
+.creagasto{
+    display: grid;
+    justify-content: center;
+    margin-top: 3.5rem;
+}
+
+a{
+    text-decoration: none;
+    color: #FED766;
+}
+
+.nuevo {
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    background-color: #26963c;
+    color: #F0F7F4;
+}
+
+.footer{
+    /* display: flex; */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+    /* justify-content: center; */
+    background-color: black;
+    color: #F0F7F4;
+    font-size: .6rem;
+    text-align: center;
+    z-index: 1;
+}
+
+#enviar{
+    padding: 0.3rem;
+}
+
+.err-msg{
+    color: red;
+    font-size: .7rem;
+    margin: 0px;
+}

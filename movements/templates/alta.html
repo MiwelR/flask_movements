@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %} Nuevo Ingreso {% endblock %}
+
+
+{% block content %}
+    <form action="creaalta" class="creaalta" method="POST">
+        {{form.csrf_token}}
+        <div class="contenedor-principal">
+        <p>
+            {{form.fecha.label}}
+            {{form.fecha(type="date")}}
+        {% for msg in form.fecha.errors %}
+            <p class="err-msg">
+                {{msg}}
+            </p>
+        {% endfor %}
+        </p>
+        <p>
+            {{form.concepto.label}}
+            {{form.concepto(size=25, placeholder="Indica un concepto")}}
+        </p>
+        <p>
+            {{form.cantidad.label}}
+            {{form.cantidad(size=25)}}
+        </p>
+        <div class="nuevo">
+            {{form.enviar(value="Añadir Ingreso", class="ingreso")}}
+        </div>
+        </div>
+    </form>
+{% endblock %}
+

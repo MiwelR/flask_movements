@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %} Modificar Movimiento {% endblock %}
+
+{% block content %}
+<form action="{{registro['id']}}" class="creaalta" method="POST">
+    {{form.csrf_token}}
+    <div class="contenedor-principal">
+    <p>
+        {{form.fecha.label}}
+        {{form.fecha(size=25, value=registro['fecha'])}}
+    </p>
+    <p>
+        {{form.concepto.label}}
+        {{form.concepto(size=25, value=registro['concepto'])}}
+    </p>
+    <p>
+        {{form.cantidad.label}}
+        {{form.cantidad(size=25, value=registro['cantidad'])}}
+    </p>
+    <div class="nuevo">
+        {{form.enviar(value="Modificar", class="boton-neutro")}}
+    </div>
+    </div>
+</form>
+
+{%  endblock %}

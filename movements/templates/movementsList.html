@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %} Resumen Mensual {% endblock %}
+
+
+{% block content %}
+    <h1>Movimientos Mensuales</h1>
+    {% if datos|length > 0 %}
+    <div class="contenedor-principal">
+    <table>
+        <tr>
+            <th class="encabezados">Fecha  <a href="/" name="ordermax">&#128315;</a><a href="/orderfechamin">&#128314;</a></th>
+            <th class="encabezados">Concepto  <a href="/listaIngresos">&#128315;</a><a href="/listaIngresos">&#128314;</a></th>
+            <th class="encabezados">Importe  <a href="/listaIngresos">&#128315;</a><a href="/listaIngresos">&#128314;</a></th>
+        </tr>
+        {% for registro in datos %}
+        <tr>
+            <td class="datos-tabla">{{ registro['fecha'] }}</td>
+            <td class="datos-tabla">{{ registro['concepto'] }}</td>
+            <td class="importes">{{ registro['cantidad'] }} €</td>
+            <td><a href="/modifica/{{registro['id']}}" class="modificar">&#9998;</a></td>
+            <td><a href="/elimina/{{registro['id']}}" class="eliminar">&#10008;</a></td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td class="total" colspan="3" text-align="right">Total: {{total}} €</td>
+        </tr>
+    </table>
+    {% else %}
+    <p>No hay movimientos</p>
+    {% endif %}
+    <ul class="botones-index">
+        <li>
+            <form action="creaalta" class="nuevo">
+                {{form.enviar(value="Añadir Ingreso", class="ingreso")}}
+            </form>
+        </li>
+        <li>
+            <form action="creagasto" class="nuevo">
+                {{form.enviar(value="Añadir Gasto", class="gasto")}}
+            </form>
+        </li>
+    </ul>
+    </div>
+{% endblock %}
